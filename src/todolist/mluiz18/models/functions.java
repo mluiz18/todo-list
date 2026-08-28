@@ -1,6 +1,7 @@
 package todolist.mluiz18.models;
 
 import java.util.Scanner;
+import todolist.mluiz18.models.task;
 
 public class functions {
     public static byte menu() {
@@ -19,6 +20,10 @@ public class functions {
             menu();
         }
         return choice;
+    }
+
+    public static void addTask(String name) {
+        task t = new task(name);
     }
 }
 
