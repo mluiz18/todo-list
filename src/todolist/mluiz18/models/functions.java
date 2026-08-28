@@ -11,6 +11,7 @@ public class functions {
         System.out.println("3. concluir");
         System.out.println("4. remover");
         System.out.println("5. sair");
+        System.out.print("Escolha: ");
         Byte choice = scn.nextByte();
 
         if (choice < 1 || choice > 5) {
