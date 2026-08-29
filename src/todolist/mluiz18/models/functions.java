@@ -1,6 +1,8 @@
 package todolist.mluiz18.models;
 
+import java.util.List;
 import java.util.Scanner;
+
 import todolist.mluiz18.models.task;
 
 public class functions {
@@ -22,8 +24,13 @@ public class functions {
         return choice;
     }
 
-    public static void addTask(String name) {
+    public static task addTask(String name, String Desc, String ID, String FD) {
         task t = new task(name);
+        t.setDescription(Desc);
+        t.setInitialDate(ID);
+        t.setFinalDate(FD);
+        return t;
     }
+
 }
 

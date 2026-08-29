@@ -1,12 +1,17 @@
 package todolist.mluiz18;
 
 import todolist.mluiz18.models.functions;
+import todolist.mluiz18.models.task;
 
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
+        List<task> taskList= new ArrayList<>();
+
         while (true) {
             byte c = functions.menu();
             if (c == 5) {
@@ -15,8 +20,12 @@ public class Main {
             } else if (c == 1) {
                 System.out.print("Nome da Tarefa: ");
                 String name = scn.next();
-                functions.addTask(name);
+                System.out.print("Descrição da tarefa: ");
+                String desc = scn.next();
+                System.out.print("Prazo Final: ");
+                String Pf = scn.next();
 
+                taskList.add(functions.addTask(name, desc, "today", Pf));
             }
         }
     }
