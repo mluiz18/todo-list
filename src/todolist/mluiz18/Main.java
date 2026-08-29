@@ -27,7 +27,7 @@ public class Main {
 
                 taskList.add(functions.addTask(name, desc, "today", Pf));
             } else if (c == 2) {
-                if (taskList.size() == 0) {
+                if (taskList.isEmpty()) {
                     System.out.println("Sem tarefas pendentes!");
                 } else {
                     functions.listTasks(taskList);
