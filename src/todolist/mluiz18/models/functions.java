@@ -43,9 +43,8 @@ public class functions {
         }
     }
 
-    public static List<task> removeTask(List<task> Tasks, byte i) {
+    public static void removeTask(List<task> Tasks, byte i) {
         Tasks.remove(i);
-        return Tasks;
     }
 }
 
