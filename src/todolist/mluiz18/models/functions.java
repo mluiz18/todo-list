@@ -32,5 +32,18 @@ public class functions {
         return t;
     }
 
+    public static void listTasks(List<task> Tasks){
+        int v = 0;
+        for (task t : Tasks) {
+            System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+            System.out.println("Tarefa " + v);
+            System.out.println("Nome: " + t.getTitle());
+            System.out.println("Descrição: " + t.getDescription());
+            System.out.println("Data Inicial: " + t.getInitialDate());
+            System.out.println("Data Final: " + t.getFinalDate());
+            v += 1;
+        }
+    }
+
 }
 
