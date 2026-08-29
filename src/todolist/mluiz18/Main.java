@@ -14,7 +14,7 @@ public class Main {
 
         while (true) {
             byte c = functions.menu();
-            if (c == 5) {
+            if (c == 4) {
                 System.out.println("Até Mais");
                 break;
             } else if (c == 1) {
