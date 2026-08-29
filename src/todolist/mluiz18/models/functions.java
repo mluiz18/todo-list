@@ -3,8 +3,6 @@ package todolist.mluiz18.models;
 import java.util.List;
 import java.util.Scanner;
 
-import todolist.mluiz18.models.task;
-
 public class functions {
     public static byte menu() {
         Scanner scn = new Scanner(System.in);
