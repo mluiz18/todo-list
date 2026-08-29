@@ -14,7 +14,7 @@ public class Main {
 
         while (true) {
             byte c = functions.menu();
-            if (c == 4) {
+            if (c == 5) {
                 System.out.println("Até Mais");
                 break;
             } else if (c == 1) {
@@ -40,6 +40,17 @@ public class Main {
                     System.out.println("Tarefa " + i + " removida com sucesso!");
                 } else {
                     System.out.println("Não existem tarefas para excluir!");
+                }
+            } else if (c == 4) {
+                functions.listTasks(taskList);
+                if (!taskList.isEmpty()) {
+                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    System.out.println("Qual tarefa deseja concluir? ");
+                    byte i = scn.nextByte();
+                    functions.removeTask(taskList, i);
+                    System.out.println("Tarefa " + i + " concluída com sucesso!");
+                } else {
+                    System.out.println("Não Existem tarefas pendentes!");
                 }
             }
         }
