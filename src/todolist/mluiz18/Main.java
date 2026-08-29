@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        List<task> taskList= new ArrayList<>();
+        List<task> taskList = new ArrayList<>();
 
         while (true) {
             byte c = functions.menu();
@@ -26,6 +26,12 @@ public class Main {
                 String Pf = scn.next();
 
                 taskList.add(functions.addTask(name, desc, "today", Pf));
+            } else if (c == 2) {
+                if (taskList.size() == 0) {
+                    System.out.println("Sem tarefas pendentes!");
+                } else {
+                    functions.listTasks(taskList);
+                }
             }
         }
     }
