@@ -32,6 +32,15 @@ public class Main {
                 } else {
                     functions.listTasks(taskList);
                 }
+            } else if (c == 3) {
+                if (!taskList.isEmpty()) {
+                    System.out.print("Digite o indice da tarefa que quer remover: ");
+                    byte i = scn.nextByte();
+                    functions.removeTask(taskList, i);
+                    System.out.println("Tarefa " + i + " removida com sucesso!");
+                } else {
+                    System.out.println("Não existem tarefas para excluir!");
+                }
             }
         }
     }
